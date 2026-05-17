@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://scholargrid.com/sitemap.xml',
+    sitemap: 'https://thescholargrid.com/sitemap.xml',
   };
 }

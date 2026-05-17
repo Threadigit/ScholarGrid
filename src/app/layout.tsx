@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://scholargrid.com'),
+  metadataBase: new URL('https://thescholargrid.com'),
   title: {
     default: 'ScholarGrid | Education Intelligence Infrastructure',
     template: '%s | ScholarGrid'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://scholargrid.com',
+    url: 'https://thescholargrid.com',
     title: 'ScholarGrid | Education Intelligence Infrastructure',
     description: 'A predictive engine that models mastery and forecasts educational outcomes. Real-time benchmarking and adaptive pathways.',
     siteName: 'ScholarGrid',
@@ -66,8 +66,8 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'ScholarGrid',
-    url: 'https://scholargrid.com',
-    logo: 'https://scholargrid.com/icon.svg',
+    url: 'https://thescholargrid.com',
+    logo: 'https://thescholargrid.com/icon.svg',
     description: 'Education Intelligence Infrastructure. A predictive engine that models mastery and forecasts educational outcomes.',
   };
 
