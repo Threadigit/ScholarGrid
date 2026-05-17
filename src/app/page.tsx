@@ -82,7 +82,7 @@ export default function Home() {
 
       <main>
         <section className={styles.hero}>
-          <h1 className={styles.heroTitle}>Know if a student will pass before they sit the exam.</h1>
+          <h1 className={styles.heroTitle}>Predict whether a student will pass before they take the exam.</h1>
           <p className={styles.heroSubtitle}>
             ScholarGrid is the intelligence layer under education. It ingests decades of standardized exam data, models individual mastery in real time, and gives students, schools, and governments a precise probability of success, not a guess. Know exactly where you stand, and exactly what to study next to change it.
           </p>
