@@ -56,36 +56,35 @@ export default function Home() {
             <div className={styles.dropdownContainer}>
               <span className={styles.navLink}>PRODUCT</span>
               <div className={styles.dropdownMenu}>
-                <Link href="#copilot" className={styles.dropdownItem}>
+                <Link href="#copilot" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                   <span className={styles.dropdownTitle}>Mastery Copilot</span>
                   <span className={styles.dropdownDesc}>Predictive scoring and adaptive learning pathways for students.</span>
                 </Link>
-                <Link href="#radar" className={styles.dropdownItem}>
+                <Link href="#radar" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                   <span className={styles.dropdownTitle}>Cohort Radar</span>
                   <span className={styles.dropdownDesc}>Real-time benchmarking and early warning systems for schools.</span>
                 </Link>
-                <Link href="#terminal" className={styles.dropdownItem}>
+                <Link href="#terminal" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                   <span className={styles.dropdownTitle}>Foresight Terminal</span>
                   <span className={styles.dropdownDesc}>Curriculum gap analysis and outcome forecasting for governments.</span>
                 </Link>
-                <Link href="#api" className={styles.dropdownItem}>
+                <Link href="#api" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                   <span className={styles.dropdownTitle}>Intelligence API</span>
                   <span className={styles.dropdownDesc}>Pluggable prediction infrastructure for the EdTech ecosystem.</span>
                 </Link>
               </div>
             </div>
-            <Link href="#community" className={styles.navLink}>COMMUNITY</Link>
-            <Link href="#docs" className={styles.navLink}>DOCS</Link>
+            <Link href="#community" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>COMMUNITY</Link>
+            <Link href="#docs" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>DOCS</Link>
           </div>
         </nav>
       </div>
 
       <main>
         <section className={styles.hero}>
-          <h1 className={styles.heroTitle}>Education Intelligence Infrastructure.</h1>
+          <h1 className={styles.heroTitle}>Know if a student will pass before they sit the exam.</h1>
           <p className={styles.heroSubtitle}>
-            A predictive engine that models mastery and forecasts educational outcomes. 
-            An intelligence system bridging the gap between exam patterns and student behavior.
+            ScholarGrid is the intelligence layer under education. It ingests decades of standardized exam data, models individual mastery in real time, and gives students, schools, and governments a precise probability of success, not a guess. Know exactly where you stand, and exactly what to study next to change it.
           </p>
           {status === 'SUCCESS' ? (
             <div className={styles.waitlistForm} style={{ color: '#4ADE80', fontWeight: 500, padding: '0.85rem 0' }}>
@@ -99,6 +98,7 @@ export default function Home() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email" 
+                aria-label="Email address"
                 className={styles.waitlistInput} 
                 required 
                 disabled={status === 'SUBMITTING'}
@@ -111,22 +111,62 @@ export default function Home() {
           {status === 'ERROR' && (
             <p style={{ color: '#F87171', marginTop: '0.5rem', fontSize: '0.9rem' }}>Oops! Something went wrong. Please try again.</p>
           )}
+          <p style={{ color: '#888', marginTop: '1.5rem', fontSize: '0.95rem', maxWidth: '540px', lineHeight: 1.6 }}>
+            Currently supporting WAEC, NECO, UTME, and SAT. Global exam coverage expanding continuously.
+          </p>
         </section>
 
         <div className={styles.sectionLight}>
           <section className={styles.intro}>
             <p>
-              ScholarGrid starts with historical archives and becomes the prediction engine you rely on. 
-              Most platforms treat every student the same. We offer clear insight into the probability of specific outcomes, adapting in real time to student performance.
+              ScholarGrid isn't another learning management system. It is a predictive infrastructure layer. By mapping live student performance against millions of historical outcomes, we eliminate guesswork and provide absolute clarity on exactly where a learner stands, along with the precise pathway needed to improve.
             </p>
+          </section>
+
+          <section className={styles.routingSection}>
+            <h3 className={styles.routingHeader}>Who are we building for?</h3>
+            <div className={styles.routingGrid}>
+              <div className={styles.routingCard}>
+                <div className={styles.routingCardHeader}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <h4>Students</h4>
+                </div>
+                <div className={styles.routingCardHook}>Move from static studying to dynamic mastery.</div>
+                <p>We map your performance against decades of historical patterns to provide a precise readiness score and a personalized pathway to actively improve it.</p>
+              </div>
+              <div className={styles.routingCard}>
+                <div className={styles.routingCardHeader}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
+                  <h4>Schools</h4>
+                </div>
+                <div className={styles.routingCardHook}>Transition from post-mortem reporting to proactive intervention.</div>
+                <p>Access live cohort benchmarking and early warning dashboards to catch students falling behind the mastery curve weeks before the exam.</p>
+              </div>
+              <div className={styles.routingCard}>
+                <div className={styles.routingCardHeader}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  <h4>Governments</h4>
+                </div>
+                <div className={styles.routingCardHook}>Don't wait for a crisis to fix curriculum gaps.</div>
+                <p>Model national pass rates and educational attainment years in advance to drive precise, data-backed policy and resource allocation.</p>
+              </div>
+              <div className={styles.routingCard}>
+                <div className={styles.routingCardHeader}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  <h4>EdTech Ecosystem</h4>
+                </div>
+                <div className={styles.routingCardHook}>Power your applications with our Intelligence API.</div>
+                <p>Seamlessly integrate our pluggable predictive engine to offer your own users unprecedented mastery indexing and outcome forecasting.</p>
+              </div>
+            </div>
           </section>
 
         <section className={styles.features}>
           <div className={styles.featureSection}>
             <div className={styles.featureContent}>
-              <h2 className={styles.featureTitle}>Predictive Outcomes.</h2>
+              <h2 className={styles.featureTitle}>Mastery Copilot.</h2>
               <p className={styles.featureDescription}>
-                Stop guessing. Real-time assessments tell a student exactly what they would likely score if the exam were held today. We process millions of data points against historical patterns to indicate precise readiness.
+                Your student's score, today. Mastery Copilot runs continuously against millions of historical exam patterns to show a student their precise readiness score, not a progress bar, an actual probability.
               </p>
             </div>
             <div className={styles.featureVisual}>
@@ -149,7 +189,7 @@ export default function Home() {
             <div className={styles.featureContent}>
               <h2 className={styles.featureTitle}>Adaptive Pathways.</h2>
               <p className={styles.featureDescription}>
-                A dynamic roadmap that constantly recalibrates based on performance. It focuses a student's energy only on the areas with the highest probability of improving their final outcome. No more static preparation.
+                No more studying everything. The pathway drops topics a student has already mastered and doubles down on the ones with the highest probability of improving their final score.
               </p>
             </div>
             <div className={styles.featureVisual}>
@@ -167,9 +207,9 @@ export default function Home() {
 
           <div className={styles.featureSection}>
             <div className={styles.featureContent}>
-              <h2 className={styles.featureTitle}>Institutional Intelligence.</h2>
+              <h2 className={styles.featureTitle}>Cohort Radar.</h2>
               <p className={styles.featureDescription}>
-                Real-time benchmarking against national and global averages. Early warning systems visualize which students are falling behind the mastery curve before the exam, enabling targeted and immediate intervention.
+                See which students are falling behind the mastery curve weeks before it shows up in results. Cohort Radar gives school leaders a live readiness dashboard, not a post-mortem report.
               </p>
             </div>
             <div className={styles.featureVisual}>
@@ -185,9 +225,9 @@ export default function Home() {
 
           <div className={styles.featureSection}>
             <div className={styles.featureContent}>
-              <h2 className={styles.featureTitle}>Policy Foresight.</h2>
+              <h2 className={styles.featureTitle}>Foresight Terminal.</h2>
               <p className={styles.featureDescription}>
-                Outcome forecasting that allows governments and testing bodies to predict national pass rates and educational attainment years in advance, driving better resource allocation and identifying curriculum gaps.
+                Governments should not find out a generation failed after the results are published. Foresight Terminal models national pass rates years ahead, so curriculum gaps get fixed before they become a crisis.
               </p>
             </div>
             <div className={styles.featureVisual}>
@@ -204,22 +244,34 @@ export default function Home() {
         <section className={styles.trust}>
           <h2 className={styles.trustHeader}>A foundation built for the future.</h2>
           <div className={styles.trustGrid}>
-            <div>
+            <div className={styles.trustCard}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.trustIcon}>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
               <h3 className={styles.trustItemTitle}>Ethical Data Sovereignty.</h3>
               <p className={styles.trustItemDescription}>
-                Performance data is used to empower learners, never to create digital barriers. We set a global standard for how educational intelligence should be handled in an AI-driven world.
+                We use intelligence to unlock potential, not build digital gatekeepers. Our models adhere to a strict, global standard for transparent, ethical data sovereignty.
               </p>
             </div>
-            <div>
+            <div className={styles.trustCard}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.trustIcon}>
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
               <h3 className={styles.trustItemTitle}>Pluggable Infrastructure.</h3>
               <p className={styles.trustItemDescription}>
-                An API-first architecture designed to be the engine under the hood of the entire industry. Other platforms can integrate our predictive insights seamlessly into their own interfaces.
+                Built as an API-first intelligence layer, ScholarGrid is designed to be the invisible engine powering the entire EdTech ecosystem. Seamlessly embed our predictive pipelines directly into your existing interfaces.
               </p>
             </div>
-            <div>
+            <div className={styles.trustCard}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.trustIcon}>
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
               <h3 className={styles.trustItemTitle}>Institutional Control.</h3>
               <p className={styles.trustItemDescription}>
-                We partner with national examination bodies and ministries of education, ensuring official data pipelines are secure while providing high-level analytics they currently lack.
+                We deploy alongside national examination bodies and ministries of education. Our architecture secures official data pipelines while delivering the high-level policy foresight that institutions currently lack.
               </p>
             </div>
           </div>
@@ -229,26 +281,26 @@ export default function Home() {
           <section className={styles.faq}>
           <h2 className={styles.faqHeader}>FAQs</h2>
           
-          <div className={styles.faqItem}>
-            <h3 className={styles.faqQuestion}>What is ScholarGrid?</h3>
+          <details className={styles.faqItem}>
+            <summary className={styles.faqQuestion}>What is ScholarGrid?</summary>
             <p className={styles.faqAnswer}>
-              ScholarGrid is an Education Intelligence Infrastructure. It ingests decades of standardized exam data, applies a sophisticated taxonomy, and builds a Predictive Model of Evolution. It is a foundational layer that predicts educational outcomes and provides actionable analytics for students, schools, and governments.
+              ScholarGrid is an Education Intelligence Infrastructure. Unlike traditional platforms that only measure past performance, ScholarGrid ingests decades of historical exam data to build a predictive engine. It models a student's mastery in real-time, giving schools and governments actionable analytics and forecasting precise educational outcomes.
             </p>
-          </div>
+          </details>
 
-          <div className={styles.faqItem}>
-            <h3 className={styles.faqQuestion}>How is this different from traditional test prep?</h3>
+          <details className={styles.faqItem}>
+            <summary className={styles.faqQuestion}>How is this different from traditional test prep?</summary>
             <p className={styles.faqAnswer}>
-              Traditional platforms are static and treat every student exactly the same. They offer zero insight into the probability of success. ScholarGrid maps student interaction against historical recurrences, identifying precise signals of mastery and calibrating a unique, predictive learning pathway.
+              Traditional test prep platforms are static. They treat every student the same and offer zero insight into the actual probability of passing. ScholarGrid maps live student interactions against millions of historical data points to identify precise signals of mastery. We don't just provide practice questions; we dynamically calibrate a unique pathway to guarantee improvement.
             </p>
-          </div>
+          </details>
 
-          <div className={styles.faqItem}>
-            <h3 className={styles.faqQuestion}>Who is ScholarGrid built for?</h3>
+          <details className={styles.faqItem}>
+            <summary className={styles.faqQuestion}>Who is ScholarGrid built for?</summary>
             <p className={styles.faqAnswer}>
               It is built for the entire educational lifecycle. For students, it provides mastery indexing and probability reports. For schools, cohort readiness dashboards and early warning systems. For governments, policy intelligence and curriculum gap analysis. For the EdTech ecosystem, it acts as an Intelligence-as-a-Service API.
             </p>
-          </div>
+          </details>
         </section>
         </div>
       </main>

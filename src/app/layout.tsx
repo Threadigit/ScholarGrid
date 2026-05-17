@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thescholargrid.com'),
@@ -7,7 +10,7 @@ export const metadata: Metadata = {
     default: 'ScholarGrid | Education Intelligence Infrastructure',
     template: '%s | ScholarGrid'
   },
-  description: 'ScholarGrid is a predictive engine that models mastery and forecasts educational outcomes. Discover real-time benchmarking, adaptive pathways, and institutional intelligence.',
+  description: 'ScholarGrid is the predictive infrastructure layer under education. By mapping live student performance against millions of historical outcomes, we provide precise pathways to improve.',
   keywords: [
     'EdTech', 
     'Education Intelligence', 
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://thescholargrid.com',
     title: 'ScholarGrid | Education Intelligence Infrastructure',
-    description: 'A predictive engine that models mastery and forecasts educational outcomes. Real-time benchmarking and adaptive pathways.',
+    description: 'ScholarGrid is the predictive infrastructure layer under education. By mapping live student performance against millions of historical outcomes, we provide precise pathways to improve.',
     siteName: 'ScholarGrid',
     images: [
       {
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ScholarGrid | Education Intelligence Infrastructure',
-    description: 'A predictive engine that models mastery and forecasts educational outcomes.',
+    description: 'ScholarGrid is the predictive infrastructure layer under education. We map live student performance to provide precise pathways to improve.',
     creator: '@ScholarGrid',
     images: ['/og-image.jpg'],
   },
@@ -68,12 +71,12 @@ export default function RootLayout({
     name: 'ScholarGrid',
     url: 'https://thescholargrid.com',
     logo: 'https://thescholargrid.com/icon.svg',
-    description: 'Education Intelligence Infrastructure. A predictive engine that models mastery and forecasts educational outcomes.',
+    description: 'ScholarGrid is the predictive infrastructure layer under education. By mapping live student performance against millions of historical outcomes, we provide precise pathways to improve.',
   };
 
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
