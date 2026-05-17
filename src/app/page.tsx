@@ -7,6 +7,7 @@ import Link from 'next/link';
 export default function Home() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'' | 'SUBMITTING' | 'SUCCESS' | 'ERROR'>('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,8 +34,25 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.navWrapper}>
         <nav className={styles.nav}>
-          <div className={styles.logo}>ScholarGrid</div>
-          <div className={styles.navLinks}>
+          <div className={styles.logo}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.logoIcon}>
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            </svg>
+            <span className={styles.logoText}>ScholarGrid</span>
+          </div>
+          
+          <button 
+            className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.open : ''}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <div className={styles.mobileMenuIcon}></div>
+          </button>
+
+          <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.open : ''}`}>
             <div className={styles.dropdownContainer}>
               <span className={styles.navLink}>PRODUCT</span>
               <div className={styles.dropdownMenu}>
@@ -237,7 +255,15 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className={styles.footerColumn}>
-          <div className={styles.logo}>ScholarGrid</div>
+          <div className={styles.logo}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.logoIcon}>
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            </svg>
+            <span className={styles.logoText}>ScholarGrid</span>
+          </div>
           <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>© {new Date().getFullYear()} ScholarGrid Inc.</span>
         </div>
         <div className={styles.footerColumn}>
