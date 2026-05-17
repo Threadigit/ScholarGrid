@@ -548,12 +548,20 @@
     padding: 0;
     gap: 0.75rem;
   }
+  .waitlistForm:focus-within {
+    border: none;
+    box-shadow: none;
+  }
   .waitlistInput {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 9999px;
     padding: 0.85rem 1.25rem;
+  }
+  .waitlistInput:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
   }
   .ctaButton {
     width: 100%;
