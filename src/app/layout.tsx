@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://scholargrid.com'),
   title: {
     default: 'ScholarGrid | Education Intelligence Infrastructure',
     template: '%s | ScholarGrid'
@@ -61,9 +62,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'ScholarGrid',
+    url: 'https://scholargrid.com',
+    logo: 'https://scholargrid.com/icon.svg',
+    description: 'Education Intelligence Infrastructure. A predictive engine that models mastery and forecasts educational outcomes.',
+  };
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
