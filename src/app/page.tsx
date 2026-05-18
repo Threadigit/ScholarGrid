@@ -74,7 +74,7 @@ export default function Home() {
           </section>
 
           <section className={styles.routingSection}>
-            <h3 className={styles.routingHeader}>Who are we building for?</h3>
+            <h3 className={styles.routingHeader}>Find your entry point.</h3>
             <div className={styles.routingGrid}>
               <div className={styles.routingCard}>
                 <div className={styles.routingCardHeader}>
