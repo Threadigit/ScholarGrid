@@ -7,7 +7,6 @@ import Link from 'next/link';
 export default function Home() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'' | 'SUBMITTING' | 'SUCCESS' | 'ERROR'>('');
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,56 +30,7 @@ export default function Home() {
     }
   };
   return (
-    <div className={styles.container}>
-      <div className={styles.navWrapper}>
-        <nav className={styles.nav}>
-          <div className={styles.logo}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.logoIcon}>
-              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
-              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
-              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
-              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
-            </svg>
-            <span className={styles.logoText}>ScholarGrid</span>
-          </div>
-          
-          <button 
-            className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.open : ''}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <div className={styles.mobileMenuIcon}></div>
-          </button>
-
-          <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.open : ''}`}>
-            <div className={styles.dropdownContainer}>
-              <span className={styles.navLink}>PRODUCT</span>
-              <div className={styles.dropdownMenu}>
-                <Link href="#copilot" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <span className={styles.dropdownTitle}>Mastery Copilot</span>
-                  <span className={styles.dropdownDesc}>Predictive scoring and adaptive learning pathways for students.</span>
-                </Link>
-                <Link href="#radar" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <span className={styles.dropdownTitle}>Cohort Radar</span>
-                  <span className={styles.dropdownDesc}>Real-time benchmarking and early warning systems for schools.</span>
-                </Link>
-                <Link href="#terminal" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <span className={styles.dropdownTitle}>Foresight Terminal</span>
-                  <span className={styles.dropdownDesc}>Curriculum gap analysis and outcome forecasting for governments.</span>
-                </Link>
-                <Link href="#api" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
-                  <span className={styles.dropdownTitle}>Intelligence API</span>
-                  <span className={styles.dropdownDesc}>Pluggable prediction infrastructure for the EdTech ecosystem.</span>
-                </Link>
-              </div>
-            </div>
-            <Link href="#community" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>COMMUNITY</Link>
-            <Link href="#docs" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>DOCS</Link>
-          </div>
-        </nav>
-      </div>
-
-      <main>
+    <main>
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Predict whether a student will pass before they take the exam.</h1>
           <p className={styles.heroSubtitle}>
@@ -304,39 +254,5 @@ export default function Home() {
         </section>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <div className={styles.footerColumn}>
-          <div className={styles.logo}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.logoIcon}>
-              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
-              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
-              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
-              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
-            </svg>
-            <span className={styles.logoText}>ScholarGrid</span>
-          </div>
-          <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>© {new Date().getFullYear()} ScholarGrid Inc.</span>
-        </div>
-        <div className={styles.footerColumn}>
-          <span className={styles.footerHeading}>Product</span>
-          <Link href="#copilot" className={styles.footerLink}>Mastery Copilot</Link>
-          <Link href="#radar" className={styles.footerLink}>Cohort Radar</Link>
-          <Link href="#terminal" className={styles.footerLink}>Foresight Terminal</Link>
-          <Link href="#api" className={styles.footerLink}>Intelligence API</Link>
-          <Link href="#pricing" className={styles.footerLink}>Pricing</Link>
-        </div>
-        <div className={styles.footerColumn}>
-          <span className={styles.footerHeading}>Resources</span>
-          <Link href="#docs" className={styles.footerLink}>Documentation</Link>
-          <Link href="#community" className={styles.footerLink}>Community</Link>
-        </div>
-        <div className={styles.footerColumn}>
-          <span className={styles.footerHeading}>Company</span>
-          <Link href="#about" className={styles.footerLink}>About</Link>
-          <Link href="#contact" className={styles.footerLink}>Contact</Link>
-        </div>
-      </footer>
-    </div>
   );
 }
