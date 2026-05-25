@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'ScholarGrid | Education Intelligence Infrastructure',
     template: '%s | ScholarGrid'
   },
-  description: 'ScholarGrid is the predictive infrastructure layer under education. By mapping live student performance against millions of historical outcomes, we provide precise pathways to improve.',
+  description: 'ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.',
   keywords: [
     'EdTech', 
     'Education Intelligence', 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://thescholargrid.com',
     title: 'ScholarGrid | Education Intelligence Infrastructure',
-    description: 'ScholarGrid is the predictive infrastructure layer under education. By mapping live student performance against millions of historical outcomes, we provide precise pathways to improve.',
+    description: 'ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.',
     siteName: 'ScholarGrid',
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ScholarGrid | Education Intelligence Infrastructure',
-    description: 'ScholarGrid is the predictive infrastructure layer under education. We map live student performance to provide precise pathways to improve.',
+    description: 'ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.',
     creator: '@ScholarGrid',
     images: ['/og-image.jpg'],
   },
@@ -73,7 +73,7 @@ export default function RootLayout({
     name: 'ScholarGrid',
     url: 'https://thescholargrid.com',
     logo: 'https://thescholargrid.com/icon.svg',
-    description: 'ScholarGrid is the predictive infrastructure layer under education. By mapping live student performance against millions of historical outcomes, we provide precise pathways to improve.',
+    description: 'ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.',
   };
 
   return (

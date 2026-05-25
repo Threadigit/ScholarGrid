@@ -69,7 +69,7 @@ export default function Home() {
         <div className={styles.sectionLight}>
           <section className={styles.intro}>
             <p>
-              ScholarGrid isn't another learning management system. It is a predictive infrastructure layer. By mapping live student performance against millions of historical outcomes, we eliminate guesswork and provide absolute clarity on exactly where a learner stands, along with the precise pathway needed to improve.
+              ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.
             </p>
           </section>
 
@@ -234,7 +234,7 @@ export default function Home() {
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>What is ScholarGrid?</summary>
             <p className={styles.faqAnswer}>
-              ScholarGrid is an Education Intelligence Infrastructure. Unlike traditional platforms that only measure past performance, ScholarGrid ingests decades of historical exam data to build a predictive engine. It models a student's mastery in real-time, giving schools and governments actionable analytics and forecasting precise educational outcomes.
+              ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.
             </p>
           </details>
 
