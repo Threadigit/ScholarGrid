@@ -38,7 +38,7 @@ export default function About() {
             ScholarGrid was engineered to be the intelligence layer under education. By ingesting massive datasets of past performance, our models identify the precise signals of mastery in real-time. 
           </p>
           <p className={styles.sectionText}>
-            We don't just show a progress bar. We give students, schools, and governments an exact probability of success long before the exam is taken, and provide the exact pathway required to change that outcome.
+            We don&apos;t just show a progress bar. We give students, schools, and governments an exact probability of success long before the exam is taken, and provide the exact pathway required to change that outcome.
           </p>
         </section>
 

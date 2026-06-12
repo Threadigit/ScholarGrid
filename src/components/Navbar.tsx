@@ -65,6 +65,7 @@ export default function Navbar() {
             Community
           </Link>
           <Link href="/about" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+          <Link href="/#waitlist" className={styles.navCta} onClick={() => setIsMobileMenuOpen(false)}>Join the waitlist</Link>
         </div>
       </nav>
     </div>

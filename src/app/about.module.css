@@ -1,29 +1,35 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 10rem 2rem 8rem;
+  padding: 9rem 2rem 8rem;
+  counter-reset: about-section;
 }
 
 .header {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   text-align: center;
 }
 
 .title {
-  font-size: 4.25rem;
+  font-size: clamp(2.75rem, 6vw, 4.25rem);
   font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.5rem;
-  color: #FAFAFA;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.75rem;
+  text-wrap: balance;
+  background: linear-gradient(180deg, #FFFFFF 30%, #A6A6AD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
   color: var(--text-secondary);
-  font-size: 1.25rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.7;
   max-width: 600px;
   margin: 0 auto;
+  text-wrap: pretty;
 }
 
 .content {
@@ -32,48 +38,68 @@
 }
 
 .section {
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 .sectionTitle {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #fff;
-  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  letter-spacing: -0.022em;
+}
+
+.sectionTitle::before {
+  counter-increment: about-section;
+  content: counter(about-section, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-mono-label);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.75rem;
 }
 
 .sectionText {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
+  text-wrap: pretty;
 }
 
 .highlightBox {
-  background: linear-gradient(145deg, #111111 0%, #080808 100%);
-  border: 1px solid #222;
-  border-radius: 12px;
-  padding: 2.5rem;
-  margin: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 100% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+    linear-gradient(165deg, #111114 0%, #08080A 100%);
+  border: 1px solid var(--border-strong);
+  border-radius: 18px;
+  padding: 3rem 2.5rem;
+  margin: 5rem 0;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 32px 64px -24px rgba(0, 0, 0, 0.7);
 }
 
 .highlightText {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-family: var(--font-display-serif);
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 400;
   color: var(--text-primary);
   line-height: 1.4;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 .backLink {
   display: inline-block;
   margin-top: 2rem;
-  color: #fff;
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--border-strong);
   padding-bottom: 0.2rem;
   transition: opacity 0.2s ease;
 }
@@ -86,20 +112,33 @@
   .container {
     padding: 6rem 1.5rem 4rem;
   }
-  
+
+  .header {
+    margin-bottom: 4rem;
+  }
+
   .title {
     font-size: 2.75rem;
   }
-  
+
   .subtitle {
     font-size: 1.1rem;
   }
-  
+
   .sectionTitle {
     font-size: 1.5rem;
   }
-  
+
   .sectionText {
     font-size: 1.05rem;
+  }
+
+  .highlightBox {
+    padding: 2.25rem 1.5rem;
+    margin: 3.5rem 0;
+  }
+
+  .highlightText {
+    font-size: 1.4rem;
   }
 }

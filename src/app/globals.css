@@ -5,12 +5,20 @@ html {
 }
 
 :root {
-  --bg-color: #0A0A0A;
-  --text-primary: #EDEDED;
-  --text-secondary: #A0A0A0;
+  --bg-color: #050506;
+  --bg-elevated: #0B0B0D;
+  --text-primary: #F4F4F2;
+  --text-secondary: #9C9CA3;
+  --text-tertiary: #6B6B72;
   --accent-color: #ffffff;
-  --border-color: #2A2A2A;
-  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --signal-green: #34D399;
+  --signal-amber: #FBBF24;
+  --signal-red: #F87171;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display-serif: var(--font-serif), Georgia, 'Times New Roman', serif;
+  --font-mono-label: var(--font-mono), ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
 * {
@@ -22,10 +30,11 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
-  font-family: var(--font-inter);
+  font-family: var(--font-sans);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -38,4 +47,67 @@ button {
   border: none;
   background: none;
   font-family: inherit;
+}
+
+::selection {
+  background: rgba(148, 148, 158, 0.4);
+}
+
+:focus-visible {
+  outline: 2px solid var(--border-strong);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* Smoothly animate <details> open/close where supported */
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  details::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1), content-visibility 0.3s allow-discrete;
+  }
+
+  details[open]::details-content {
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

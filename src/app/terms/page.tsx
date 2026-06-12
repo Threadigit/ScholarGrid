@@ -24,7 +24,7 @@ export default function TermsOfService() {
         </p>
         <ul>
           <li>Our readiness scores and predictive models are <strong>probabilistic forecasts</strong>, not absolute guarantees of future performance.</li>
-          <li>ScholarGrid shall not be held liable for any student's failure to pass an exam, achieve a specific certification, or meet institutional benchmarks, regardless of the readiness score or mastery pathway provided by our platform.</li>
+          <li>ScholarGrid shall not be held liable for any student&apos;s failure to pass an exam, achieve a specific certification, or meet institutional benchmarks, regardless of the readiness score or mastery pathway provided by our platform.</li>
           <li>Our tools are designed to inform proactive intervention, not to replace formal educational instruction or institutional assessment.</li>
         </ul>
 
