@@ -20,10 +20,10 @@ export default function Footer() {
         <div className={styles.footerColumns}>
           <div className={styles.footerColumn}>
             <span className={styles.footerHeading}>Product</span>
-            <Link href="/#copilot" className={styles.footerLink}>Mastery Copilot</Link>
-            <Link href="/#radar" className={styles.footerLink}>Cohort Radar</Link>
-            <Link href="/#terminal" className={styles.footerLink}>Foresight Terminal</Link>
-            <Link href="/#api" className={styles.footerLink}>Intelligence API</Link>
+            <Link href="/products/mastery-copilot" className={styles.footerLink}>Mastery Copilot</Link>
+            <Link href="/products/cohort-radar" className={styles.footerLink}>Cohort Radar</Link>
+            <Link href="/products/foresight-terminal" className={styles.footerLink}>Foresight Terminal</Link>
+            <Link href="/products/intelligence-api" className={styles.footerLink}>Intelligence API</Link>
           </div>
           <div className={styles.footerColumn}>
             <span className={styles.footerHeading}>Resources</span>

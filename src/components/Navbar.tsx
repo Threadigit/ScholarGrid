@@ -37,19 +37,19 @@ export default function Navbar() {
               </svg>
             </span>
             <div className={styles.dropdownMenu}>
-              <Link href="/#copilot" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/products/mastery-copilot" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                 <span className={styles.dropdownTitle}>Mastery Copilot</span>
                 <span className={styles.dropdownDesc}>Predictive scoring and adaptive learning pathways for students.</span>
               </Link>
-              <Link href="/#radar" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/products/cohort-radar" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                 <span className={styles.dropdownTitle}>Cohort Radar</span>
                 <span className={styles.dropdownDesc}>Real-time benchmarking and early warning systems for schools.</span>
               </Link>
-              <Link href="/#terminal" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/products/foresight-terminal" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                 <span className={styles.dropdownTitle}>Foresight Terminal</span>
                 <span className={styles.dropdownDesc}>Curriculum gap analysis and outcome forecasting for governments.</span>
               </Link>
-              <Link href="/#api" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/products/intelligence-api" className={styles.dropdownItem} onClick={() => setIsMobileMenuOpen(false)}>
                 <span className={styles.dropdownTitle}>Intelligence API</span>
                 <span className={styles.dropdownDesc}>Pluggable prediction infrastructure for the EdTech ecosystem.</span>
               </Link>

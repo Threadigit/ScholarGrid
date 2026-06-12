@@ -871,6 +871,38 @@
   background: var(--signal-red);
 }
 
+/* Intelligence API — response payload */
+
+.apiCode {
+  margin: 0;
+  padding: 0.25rem 0.1rem;
+  font-family: var(--font-mono-label);
+  font-size: 0.74rem;
+  line-height: 1.85;
+  color: #9C9CA3;
+  overflow-x: auto;
+}
+
+.apiCode code {
+  font-family: inherit;
+}
+
+.codeKey {
+  color: #D4D4D8;
+}
+
+.codeString {
+  color: var(--signal-green);
+}
+
+.codeValue {
+  color: var(--signal-amber);
+}
+
+.codePunct {
+  color: #6B6B72;
+}
+
 /* Foresight Terminal — projection chart */
 
 .foresightChart {
