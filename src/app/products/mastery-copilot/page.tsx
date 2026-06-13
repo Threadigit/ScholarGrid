@@ -13,7 +13,7 @@ export default function MasteryCopilotPage() {
     <ProductPage
       slug="mastery-copilot"
       eyebrow="Product — For students"
-      title="Your exam score, before the exam."
+      title="Your exam readiness score, before the exam."
       subtitle="Mastery Copilot runs your performance against millions of historical exam patterns and tells you your actual probability of passing — not a progress bar. Then it shows you exactly what to study next to raise it."
       visual={<CopilotMockup />}
       capabilitiesHeading="Built to turn studying into a strategy."

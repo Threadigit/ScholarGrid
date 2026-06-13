@@ -77,7 +77,7 @@ export default function Home() {
           <section className={styles.intro}>
             <span className={styles.overline}>The platform</span>
             <p className={styles.introText}>
-              ScholarGrid combines vast historical educational performance data with live student progress to deliver <em>precise, real-time</em> success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.
+              ScholarGrid connects historical exam performance data with <em>real-time</em> student learning signals to generate readiness scores, outcome ranges, mastery insights, adaptive study paths, and cohort-level forecasts.
             </p>
           </section>
 
