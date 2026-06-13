@@ -62,13 +62,29 @@ export default function Home() {
             {status === 'ERROR' && (
               <p className={styles.errorMessage}>Oops! Something went wrong. Please try again.</p>
             )}
-            <div className={styles.examRow}>
-              <span className={styles.examLabel}>Currently supporting</span>
-              <span className={styles.examChip}>WAEC</span>
-              <span className={styles.examChip}>NECO</span>
-              <span className={styles.examChip}>UTME</span>
-              <span className={styles.examChip}>SAT</span>
-              <span className={styles.examNote}>Global exam coverage expanding continuously.</span>
+            <div className={styles.examContainer}>
+              <div className={styles.examRow}>
+                <span className={styles.examLabel}>
+                  <span className={styles.liveIndicator}></span> Live Now
+                </span>
+                <span className={`${styles.examChip} ${styles.examChipActive}`}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--signal-green)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '6px'}}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  UTME
+                </span>
+              </div>
+              <div className={styles.examRow}>
+                <span className={styles.examLabel}>Coming soon</span>
+                <div className={styles.examGroup}>
+                  <span className={styles.examGroupLabel}>Global:</span>
+                  <span className={styles.examChip}>SAT</span>
+                  <span className={styles.examChip}>IGCSE</span>
+                </div>
+                <div className={styles.examGroup}>
+                  <span className={styles.examGroupLabel}>Regional:</span>
+                  <span className={styles.examChip}>WAEC</span>
+                  <span className={styles.examChip}>NECO</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

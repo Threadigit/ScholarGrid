@@ -364,14 +364,59 @@
   font-size: 0.9rem;
 }
 
+.examContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
+}
+
 .examRow {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.6rem;
-  margin-top: 2.5rem;
-  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
+}
+
+.examGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0.4rem;
+}
+
+.examGroupLabel {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-right: 0.2rem;
+}
+
+.liveIndicator {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--signal-green);
+  margin-right: 6px;
+  box-shadow: 0 0 8px var(--signal-green);
+  animation: pulse 2s infinite;
+}
+
+.examChipActive {
+  background: rgba(52, 211, 153, 0.05);
+  border-color: rgba(52, 211, 153, 0.3);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; box-shadow: 0 0 8px var(--signal-green); }
+  50% { opacity: 0.4; box-shadow: 0 0 2px var(--signal-green); }
+  100% { opacity: 1; box-shadow: 0 0 8px var(--signal-green); }
 }
 
 .examLabel {
