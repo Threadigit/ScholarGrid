@@ -234,7 +234,7 @@ export default function Home() {
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>What is ScholarGrid?</summary>
             <p className={styles.faqAnswer}>
-              ScholarGrid is a predictive education intelligence platform that combines vast historical educational performance data with live student progress to deliver precise real-time success predictions, mastery insights, adaptive learning pathways, and school-level cohort forecasts.
+              ScholarGrid is a predictive education intelligence platform that connects historical exam performance data with <em>real-time</em> student learning signals to generate readiness scores, outcome ranges, mastery insights, adaptive study paths, and cohort-level forecasts.
             </p>
           </details>
 
