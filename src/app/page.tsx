@@ -39,7 +39,8 @@ export default function Home() {
 
             {status === 'SUCCESS' ? (
               <div className={styles.successMessage}>
-                ✓ You&apos;re on the list! We&apos;ll be in touch soon.
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                You&apos;re on the list! We&apos;ll be in touch soon.
               </div>
             ) : (
               <form className={styles.waitlistForm} onSubmit={handleSubmit}>

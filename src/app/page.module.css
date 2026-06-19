@@ -90,10 +90,7 @@
 }
 
 .logoText {
-  background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .navLinks {
@@ -220,19 +217,6 @@
   -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 0%, black 30%, transparent 75%);
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: -22rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60rem;
-  height: 38rem;
-  z-index: -1;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.085) 0%, transparent 65%);
-  pointer-events: none;
-}
-
 .heroInner {
   display: flex;
   flex-direction: column;
@@ -249,10 +233,7 @@
   margin-bottom: 1.75rem;
   max-width: 17ch;
   text-wrap: balance;
-  background: linear-gradient(180deg, #FFFFFF 30%, #A6A6AD 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
   animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -984,10 +965,7 @@
   font-weight: 600;
   margin-bottom: 4rem;
   letter-spacing: -0.028em;
-  background: linear-gradient(180deg, #FFFFFF 30%, #A6A6AD 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .trustGrid {

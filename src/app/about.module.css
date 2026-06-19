@@ -17,10 +17,7 @@
   letter-spacing: -0.035em;
   margin-bottom: 1.75rem;
   text-wrap: balance;
-  background: linear-gradient(180deg, #FFFFFF 30%, #A6A6AD 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .subtitle {
